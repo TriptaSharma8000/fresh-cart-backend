@@ -6,12 +6,7 @@ const cors = require("cors");
 const app = express();
 
 // Middleware ----------------
-app.use(cors({
-  origin: 'https://fresh-cart-frontend.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -28,7 +23,12 @@ const Wishlist = require("./model/Wishlist");
 
 
 // Routes --------------------
-
+app.get("/", async (req, res) => {
+  
+    console.log("hiii");
+    res.status(200).json({ status: false , message: "ok"});
+  
+});
 // Signup --------------------
 app.post("/signup", async (req, res) => {
   try {
@@ -228,8 +228,8 @@ app.listen(8080, () => {
 
 
 
-app.get("/",(req,res)=>{
-  res.json({
-    status:true
-  })
-})
+// app.get("/",(req,res)=>{
+//   res.json({
+//     status:true
+//   })
+// })
