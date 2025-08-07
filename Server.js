@@ -218,3 +218,11 @@ app.post("/checkout", async (req, res) => {
 app.listen(8080, () => {
   console.log("Node server started at http://localhost:8080");
 });
+
+
+
+app.get("/",(req,res)=>{
+  res.json({
+    status:true
+  })
+})
