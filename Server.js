@@ -7,8 +7,9 @@ const app = express();
 
 // Middleware ----------------
 app.use(cors({
-  origin: "https://fresh-cart-frontend-tp8g.vercel.app", // your frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: 'https://fresh-cart-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
 app.use(bodyParser.json());
