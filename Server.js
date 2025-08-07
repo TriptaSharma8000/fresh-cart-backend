@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB -------------------
-mongoose.connect("mongodb+srv://Tripta:tqTpdA5kH8JHfriz@cluster7.fveuzzh.mongodb.net/freshcart")
+mongoose.connect("mongodb+srv://sharma:r398r31qFqQKgAKo@cluster7.fveuzzh.mongodb.net/freshcart")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("Mongo Error", err));
 
@@ -19,6 +19,8 @@ mongoose.connect("mongodb+srv://Tripta:tqTpdA5kH8JHfriz@cluster7.fveuzzh.mongodb
 const Users = require("./model/Users");
 const Products = require("./model/Addproduct");
 const Wishlist = require("./model/Wishlist");
+
+
 
 // Routes --------------------
 
